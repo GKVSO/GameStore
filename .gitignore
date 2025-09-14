@@ -1,0 +1,6 @@
+.DS_store
+.srv/*
+!.srv/custom.ini
+/plugins/akismet
+/plugins/hello.php
+/themes/twenty*/
