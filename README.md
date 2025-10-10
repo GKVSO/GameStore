@@ -162,8 +162,19 @@ This ensures consistent WordPress versions across deployments.
 
 ### Trigger Events
 
-- **Development Deployment**: Push to `dev` branch
-- **Production Deployment**: Create a release
+- **Automatic Development Deployment**: Push to `dev` branch
+- **Automatic Production Deployment**: Create a release
+- **Manual Deployment**: Through GitHub Actions web interface with environment and WordPress version selection
+
+#### Manual Deployment
+
+1. Go to your GitHub repository
+2. Open the **Actions** tab
+3. Select the **GameStore Deploy** workflow
+4. Click **Run workflow**
+5. Configure parameters:
+   - **Environment**: `dev` or `prod`
+   - **WordPress version**: leave empty to use version from `wp-version-control.cfg` or specify exact version (e.g., `6.3.2`)
 
 ### Deployment Stages
 
