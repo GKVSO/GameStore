@@ -76,11 +76,17 @@ jobs:
           password: ${{ secrets.SERVER_SSH_PASSWORD }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            find "${{ env.TARGET_PATH }}" -type f -name "*.php" ! -name "wp-config.php" -delete;
-            rm -rf "${{ env.TARGET_PATH }}/wp-admin" "${{ env.TARGET_PATH }}/wp-includes";
-            unzip -o "${{ env.TARGET_PATH }}/wordpress.zip" -d "${{ env.TARGET_PATH }}/";
-            mv "${{ env.TARGET_PATH }}/wordpress/*" "${{ env.TARGET_PATH }}/";
-            rm -rf "${{ env.TARGET_PATH }}/wordpress";
+            cd "${{ env.TARGET_PATH }}"
+            find . -type f -name "*.php" ! -name "wp-config.php" -delete
+            rm -rf ./wp-admin ./wp-includes
+            unzip -o wordpress.zip
+            if [ -d "wordpress" ]; then
+              cp -r wordpress/* .
+              rm -rf wordpress
+            else
+              echo "Warning: wordpress directory not found after extraction"
+              ls -la
+            fi
 
       - name: Update Plugins and Themes
         uses: appleboy/ssh-action@v1.0.3
