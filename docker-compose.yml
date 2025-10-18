@@ -3,7 +3,6 @@ services:
     image: mysql:latest
     restart: always
     environment:
-      WORDPRESS_DEBUG: 'true'
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_DATABASE: gamestore
       MYSQL_USER: Admin
@@ -17,6 +16,7 @@ services:
     image: wordpress:latest
     restart: always
     environment:
+      WORDPRESS_DEBUG: 'true'
       WORDPRESS_DB_HOST: mysql:3306
       WORDPRESS_DB_USER: Admin
       WORDPRESS_DB_PASSWORD: Admin123
