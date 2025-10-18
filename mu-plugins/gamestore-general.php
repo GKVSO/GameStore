@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Gamestore General
  * Description: General plugin for the Gamestore site.
- * Version: 1.0.0
+ * Version: 0.0.1
  * Author: GKVSO
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

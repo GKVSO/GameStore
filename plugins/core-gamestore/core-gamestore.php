@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Gamestore Core
  * Description: Core plugin for the Gamestore site.
- * Version: 1.0.0
+ * Version: 0.0.1
  * Author: GKVSO
  * Author URI: https://t.me/GKVSO
  * License: GPL2
