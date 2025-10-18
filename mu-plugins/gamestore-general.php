@@ -10,6 +10,7 @@
  * Domain Path: /languages
 */
 
+// TODO: Добавить комментарий, а так-же переместить эту функцию в мой репозиторий для функций wordpress
 function gkvso_remove_dashboard_widgets() {
 	global $wp_meta_boxes;
 
